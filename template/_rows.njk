@@ -1,0 +1,29 @@
+{% for row in rows_news %}
+{% if loop.index0 < news_per_page %}
+<a class="row" href="{{row.link}}">
+    <section class="content_item side_by_side">
+        <div class="item_img_wrapper">
+                <img {{row.img_attr}}
+                    alt="">
+            </div>
+            <div class="item_text_wrapper">
+                <p>{{row["category"]}}</p>
+                <h2>{{row["title"]}}</h2>
+                <p>{{row["pub_date"]}}</p>
+                <p class="description">{{row["description"]}}</p>
+            </div>
+    </section>
+
+</a>
+{% endif %}
+
+{% endfor %}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+<div class=" header_row content_first_row row">
+    <a href="" class="content_item1">
+        <section class="content_item">
+            <div class="item_img_wrapper">
+                <img {{first_row_news[0].img_attr}}
+                    alt="">
+            </div>
+            <div class="item_text_wrapper">
+                <p>{{first_row_news[0]["category"]}}</p>
+                <h2>{{first_row_news[0]["title"]}}</h2>
+                <p>{{first_row_news[0]["pub_date"]}}</p>
+            </div>
+        </section>
+    </a>
+    {% if first_row_news | length > 1  %}
+    <a href="" class="content_item2">
+        <section class="content_item">
+            <div class="item_img_wrapper">
+                <img {{first_row_news[1].img_attr}} alt="">
+            </div>
+            <div class="item_text_wrapper">
+                <p>{{first_row_news[1]["category"]}}</p>
+                <h2>{{first_row_news[1]["title"]}}</h2>
+                <p>{{first_row_news[1]["pub_date"]}}</p>
+                <p class="description">{{first_row_news[1]["description"]}}</p>
+            </div>
+        </section>
+    </a>
+    {% endif %}
+</div>

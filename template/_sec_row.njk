@@ -1,0 +1,51 @@
+<div class=" header_row content_sec_row row">
+    {% if sec_row_news | length > 0  %}
+    <a href="{{sec_row_news[0].link}}" class="content_item1">
+        <section class="content_item">
+            <div class="item_img_wrapper">
+                <img {{sec_row_news[0].img_attr}}
+                    alt="">
+            </div>
+            <div class="item_text_wrapper">
+                <p>{{sec_row_news[0]["category"]}}</p>
+                <h2>{{sec_row_news[0]["title"]}}</h2>
+                <p>{{sec_row_news[0]["pub_date"]}}</p>
+                <p class="description">{{sec_row_news[0]["description"]}}</p>
+            </div>
+        </section>
+    </a>
+    {% endif %}
+    <div class=" content_item2">
+        {% if sec_row_news | length > 1  %}
+        <a href="{{sec_row_news[1].link}}">
+            <section class="side_by_side content_item">
+                <div class="item_img_wrapper">
+                    <img {{sec_row_news[1].img_attr}}
+                        alt="">
+                </div>
+                <div class="item_text_wrapper">
+                    <p>{{sec_row_news[1]["category"]}}</p>
+                    <h2>{{sec_row_news[1]["title"]}}</h2>
+                    <p>{{sec_row_news[1]["pub_date"]}}</p>
+                </div>
+            </section>
+        </a>
+        {% endif %}
+        {% if sec_row_news | length > 2  %}
+        <a href="{{sec_row_news[2].link}}">
+            <section class=" side_by_side content_item ">
+                <div class="item_img_wrapper">
+                    <img {{sec_row_news[2].img_attr}}
+                        alt="">
+                </div>
+                <div class="item_text_wrapper">
+                    <p>{{sec_row_news[2]["category"]}}</p>
+                    <h2>{{sec_row_news[2]["title"]}}</h2>
+                    <p>{{sec_row_news[2]["pub_date"]}}</p>
+                </div>
+            </section>
+        </a>
+        {% endif %}
+    </div>
+
+</div>

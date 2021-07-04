@@ -1,0 +1,15 @@
+
+<div class="header_top_for_selected_cat">
+        <h1 class="selected_cat_logo">WIRED</h1>
+        <h2 class="selected_cat_title">{{selected_category}}</h2>
+        <a href="#home" class="home_page_link">Home</a>
+</div>
+<div class="header_bott">
+{% for category_item in categores_list %}
+    {% if category_item == selected_category %}
+        <div class="category_item selected_category"><a href="#category/{{category_item}}" class="selected_cat_item move_down">{{category_item}}</a><a href="#home" class="selected_cat_item close">X</a>  </div>
+    {% else %}
+        <div class="category_item"><a href="#category/{{category_item}}">{{category_item}}</a></div>
+    {% endif %} 
+{% endfor %}      
+</div>

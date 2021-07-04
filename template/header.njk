@@ -1,0 +1,7 @@
+{% if selected_category | length < 1  %}
+{% include "_header.njk" %}
+{% endif %}
+
+{% if selected_category | length > 0  %}
+{% include "_header_category.njk" %}
+{% endif %}

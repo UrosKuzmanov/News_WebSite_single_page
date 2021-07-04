@@ -1,0 +1,11 @@
+
+<div class="header_top">
+        <h1>WIRED</h1>
+</div>
+<div class="header_bott">
+{% for category_item in categores_list %}
+
+    <div class="category_item"><a href="#category/{{category_item}}">{{category_item}}</a></div>
+
+{% endfor %}      
+</div>
